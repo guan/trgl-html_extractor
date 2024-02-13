@@ -9,8 +9,9 @@ export function run(): void {
   try {
     const repoName: string = core.getInput('repo-name')
 
-    core.info(`RepoName: ${repoName}`)
-    core.setOutput('repo', `RepoName: ${repoName}`)
+    core.info(`RepoName(info): ${repoName}`)
+    console.log(`RepoName(console.log): ${repoName}`)
+    core.setOutput('repo', `RepoName(output): ${repoName}`)
 
     // // Log the current timestamp, wait, then log the new timestamp
     // core.debug(new Date().toTimeString())
