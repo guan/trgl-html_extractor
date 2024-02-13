@@ -57,8 +57,8 @@ jobs:
         with:
           milliseconds: 2000
           # repo-name: ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}
-          repo: hoge
+          repo-name: hoge
 
       - name: Print Output
-        id: repo-name
-        run: echo "${{ steps.test-action.outputs.repo-name }}"
+        id: repo
+        run: echo "${{ steps.test-action.outputs.repo }}"
