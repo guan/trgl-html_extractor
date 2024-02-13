@@ -59,12 +59,16 @@ jobs:
         id: npm-bundle
         run: npm run bundle
 
+      - name: Set Repo ENV variables
+        run: |
+          echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV        
+
       - name: Test Local Action
         id: test-action
         uses: ./
         with:
           milliseconds: 2000
-          repo-name: ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}
+          repo-name: ${{ env.REPO_NAME }}
 
       - name: Print Output
         id: repo
