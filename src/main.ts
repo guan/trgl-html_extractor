@@ -17,7 +17,6 @@ export function run(): void {
     // core.debug(new Date().toTimeString())
     // await wait(parseInt(ms, 10))
     // core.debug(new Date().toTimeString())
-
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
