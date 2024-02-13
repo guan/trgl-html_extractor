@@ -9,6 +9,9 @@ branding:
 
 # Define your inputs here.
 inputs:
+  repo-name:
+    description: 'The name of the repository'
+    required: true
   milliseconds:
     description: 'Your input description here'
     required: true

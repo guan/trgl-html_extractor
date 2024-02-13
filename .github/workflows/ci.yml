@@ -56,6 +56,7 @@ jobs:
         uses: ./
         with:
           milliseconds: 2000
+          repo-name: ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}
 
       - name: Print Output
         id: output
