@@ -19,7 +19,7 @@ inputs:
 
 # Define your outputs here.
 outputs:
-  repo-name:
+  repo:
     description: 'Repository name'
 
 runs:

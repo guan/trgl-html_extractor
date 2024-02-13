@@ -57,7 +57,7 @@ jobs:
         with:
           milliseconds: 2000
           # repo-name: ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}
-          repo-name: hoge
+          repo: hoge
 
       - name: Print Output
         id: repo-name

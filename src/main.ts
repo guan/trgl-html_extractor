@@ -18,8 +18,6 @@ export function run(): void {
     // await wait(parseInt(ms, 10))
     // core.debug(new Date().toTimeString())
 
-    // // Set outputs for other workflow steps to use
-    core.setOutput('repo-name', repoName)
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
