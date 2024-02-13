@@ -10,27 +10,27 @@ import * as core from '@actions/core'
 import * as main from '../src/main'
 
 // Mock the action's main function
-const runMock = jest.spyOn(main, 'run')
+// const runMock = jest.spyOn(main, 'run')
 
 // Other utilities
-const timeRegex = /^\d{2}:\d{2}:\d{2}/
+// const timeRegex = /^\d{2}:\d{2}:\d{2}/
 
 // Mock the GitHub Actions core library
-let debugMock: jest.SpyInstance
-let errorMock: jest.SpyInstance
+// let debugMock: jest.SpyInstance
+// let errorMock: jest.SpyInstance
 let getInputMock: jest.SpyInstance
-let setFailedMock: jest.SpyInstance
-let setOutputMock: jest.SpyInstance
+// let setFailedMock: jest.SpyInstance
+// let setOutputMock: jest.SpyInstance
 
 describe('action', () => {
   beforeEach(() => {
     jest.clearAllMocks()
 
-    debugMock = jest.spyOn(core, 'debug').mockImplementation()
-    errorMock = jest.spyOn(core, 'error').mockImplementation()
+    // debugMock = jest.spyOn(core, 'debug').mockImplementation()
+    // errorMock = jest.spyOn(core, 'error').mockImplementation()
     getInputMock = jest.spyOn(core, 'getInput').mockImplementation()
-    setFailedMock = jest.spyOn(core, 'setFailed').mockImplementation()
-    setOutputMock = jest.spyOn(core, 'setOutput').mockImplementation()
+    // setFailedMock = jest.spyOn(core, 'setFailed').mockImplementation()
+    // setOutputMock = jest.spyOn(core, 'setOutput').mockImplementation()
   })
 
   it('get dir name', () => {
@@ -38,15 +38,16 @@ describe('action', () => {
       switch (name) {
         case 'repo-name':
           return 'trgl-html_extractor'
+
         default:
           return ''
       }
     })
 
     const dir = main.getRepoName()
-    expect(dir).toBe("trgl-html_extractor")
+    expect(dir).toBe('trgl-html_extractor')
 
     const webRoot = main.getWebroot()
-    expect(webRoot).toBe("trgl-html")
+    expect(webRoot).toBe('trgl-html')
   })
 })
