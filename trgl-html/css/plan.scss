@@ -1,0 +1,158 @@
+@charset "utf-8";
+/*! Writen  by SCSS */
+@import "mixin";
+
+$cl40: clamp(30px,cal_per(1200,40),40px);
+$cl60: clamp(40px,cal_per(1200,60),60px);
+$cl80: clamp(50px,cal_per(1200,80),80px);
+$cl100: clamp(60px,cal_per(1200,100),100px);
+$cl120: clamp(80px,cal_per(1200,120),120px);
+
+.sec_main{
+	position: relative;
+	background: url("../images/plan/main.jpg?230111") center / cover no-repeat;
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		inset: 0;
+		background: rgba(#000,0.8);
+	}
+}
+.plan_inner{
+	padding: $cl60 0;
+}
+.plan_lead{
+	text-align: center;
+	letter-spacing: 0.1em;
+	font-size: 30px;
+	margin-bottom: $cl100;
+	@include mq($br_tb){
+		font-size: 4.8vw;
+	}
+	@include mq($br_sp){
+		margin-bottom: 40px;
+	}
+}
+
+.img01 {
+	max-width: 900px;
+	margin: 0 auto;
+	width: calc(100% - 40px);
+}
+
+.plan_list{
+	display: grid;
+	align-items: start;
+	align-content: start;
+	grid-template-columns: repeat(2,1fr);
+	gap: 60px flr_per(1200,80);
+	@include mq($br_tb){
+		gap: 30px 4%;
+	}
+	@include mq($br_sp){
+		grid-template-columns: 1fr;
+		gap: 20px 0;
+	}
+	.item{
+		a,
+		.close{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(45,37,35,1) 100%);
+			position: relative;
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				inset: 0;
+				pointer-events: none;
+				z-index: 2;
+				border: 1px solid;
+				border-image: linear-gradient(160deg, rgba(191,162,64,1) 0%, rgba(255,238,172,1) 50%, rgba(191,162,64,1) 100%);;
+				border-image-slice: 1;
+			}
+			.item_text_box{
+				width: fit-content;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: auto;
+				padding: 10px 0;
+				.type_box{
+					display: flex;
+					align-items: baseline;
+					justify-content: center;
+					font-size: clamp(20px,fz_vw(1240,34),36px);
+					line-height: 1;
+					border-bottom: 1px solid #fff;
+					padding-bottom: cal_per(160,15);
+					@include mq($br_sp){
+						font-size: 24px;
+						padding-bottom: 5px;
+					}
+					.text_lg{
+						font-size: 2em;
+					}
+				}
+				.ldk{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					padding: cal_per(160,15) 0;
+					font-size: clamp(16px,fz_vw(1240,23),24px);
+					line-height: 1;
+					@include mq($br_sp){
+						font-size: 18px;
+						padding: 5px 0;
+					}
+					.text_lg{
+						font-size: 1.8em;
+					}
+				}
+				.size_box{
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: center;
+					font-size: clamp(22px,fz_vw(1240,38),40px);
+					border-top: 1px solid #fff;
+					line-height: 0.8;
+					padding-top: cal_per(160,15);
+					@include mq($br_sp){
+						font-size: 24px;
+						padding-top: 5px;
+					}
+					.size_head{
+						font-size: 0.4em;
+					}
+					.size{
+						display: flex;
+						align-items: baseline;
+						margin: 0.2em 0;
+					}
+					.size_sub{
+						font-size: 0.5em;
+					}
+				}
+			}
+			.item_figure{
+				@include w_per(560,250);
+				margin-right: cal_per(560,20);
+			}
+		}
+		a{
+			transition: opacity 0.3s ease-in-out;
+			@include hover{
+				opacity: 0.7;
+			}
+		}
+	}
+}
+

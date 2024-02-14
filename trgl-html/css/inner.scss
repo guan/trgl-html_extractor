@@ -1,0 +1,182 @@
+@charset "utf-8";
+/*! Writen  by SCSS */
+@import "mixin";
+sup{
+	font-size: 0.5em;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+.flex_wrap{
+	flex-wrap: wrap;
+}
+.flex_rr{
+	flex-direction: row-reverse;
+}
+.pos_r{
+	position: relative;
+}
+.pos_a{
+	position: absolute;
+}
+
+.sec_main{
+	position: relative;
+	padding-top: cal_per(1600,200);
+	background: #242424;
+	@include mq($br_sp){
+		padding-top: 150px;
+	}
+	.main_head{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: #d5c8a0;
+		line-height: 1;
+		z-index: 2;
+		.en{
+			letter-spacing: 0.2em;
+			font-size: 40px;
+			margin-bottom: cal_em(40,20);
+			@include mq($br_sp){
+				font-size: 28px;
+				margin-bottom: 0.3em;
+			}
+		}
+		.jp{
+			letter-spacing: 0.1em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			@include mq($br_sp){
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.pos_r{
+	position: relative;
+}
+.pos_a{
+	position: absolute;
+}
+
+
+.is-effect-fade {
+	opacity: 0;
+	transition: opacity 0.9s ease-in;
+}
+.is-effect-fade__animation {
+	opacity: 1;
+}
+
+
+
+.sec_head{
+	font-size: clamp(20px,fz_vw(1240,28),30px);
+	@include lh(50,30);
+}
+.read{
+	font-size: clamp(13px,fz_vw(1240,16),16px);
+	line-height: 1.8;
+	@include mq($br_sp){
+		font-size: 14px;
+		line-height: 1.6;
+	}
+	&.read_min{
+		font-size: clamp(11px,fz_vw(1240,13),14px);
+		@include mq($br_sp){
+			font-size: 13px;
+		}
+	}
+}
+
+.inner_lead{
+	font-size: clamp(28px,fz_vw(1240,40),42px);
+	color: #d5c78c;
+	line-height: 1.4;
+}
+
+
+.tab_wrap{
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+	@include mq($br_sp){
+		display: block;
+		max-width: 320px;
+		width: 70%;
+	}
+	.item{
+		@include w_per(680,320);
+		@include mq($br_sp){
+			width: 100%;
+			&:first-child{
+				margin-bottom: 15px;
+			}
+		}
+		a{
+			display: block;
+			position: relative;
+			transition: opacity 0.3s ease-in-out;
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				inset: 0;
+				border: 1px solid;
+				border-image: linear-gradient(160deg, rgba(191,162,64,1) 0%, rgba(255,238,172,1) 50%, rgba(191,162,64,1) 100%);
+				border-image-slice: 1;
+				z-index: 2;
+				opacity: 0;
+				transition: opacity 0.3s ease-in-out;
+			}
+			@include hover{
+				opacity: 0.7;
+				&::after{
+					opacity: 1;
+				}
+			}
+		}
+		&.active{
+			a{
+				&::after{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

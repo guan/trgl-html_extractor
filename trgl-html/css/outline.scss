@@ -1,0 +1,92 @@
+@charset "utf-8";
+/*! Writen  by SCSS */
+@import "mixin";
+#outline{
+	background: #fff;
+}
+.sec_main{
+	position: relative;
+	padding-top: 200px;
+	background: #242424;
+	margin-bottom: 60px;
+	@include mq($br_sp){
+		margin-bottom: 30px;
+		padding-top: 150px;
+	}
+}
+.frame {
+	overflow:hidden;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	width:100%;
+	position:relative;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+}
+#footer{
+	margin-top: 60px;
+	@include mq($br_sp){
+		margin-top: 30px;
+	}
+	.ft-area2{
+		background:#fff;
+		padding:0 10%;
+		/*display:flex;*/
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		.inner {
+			padding: 30px 0;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			max-width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+			@include mq($br_tb){
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
+			li {
+				width: 30%;
+				margin-right: 15px;
+				margin-left: 15px;
+				@include mq($br_tb){
+					width: 100%;
+					margin-bottom: 30px;
+					margin-right:0;
+					margin-left:0;
+				}
+			}
+		}
+	}
+	.copy{
+		position: static;
+		text-align: center;
+		background: #f4f4f4;
+		padding: 10px 20px 40px;
+		@include mq($br_tb){
+			padding: 10px 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

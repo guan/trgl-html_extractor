@@ -1,0 +1,8 @@
+/*! Writen  by SCSS */
+.item:not(.flex) .text_box {
+  margin-top: 13px; }
+  @media screen and (max-width: 480px) {
+    .item:not(.flex) .text_box {
+      margin-top: 10px; } }
+
+/*# sourceMappingURL=structure.css.map */

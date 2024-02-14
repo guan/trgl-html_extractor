@@ -1,0 +1,151 @@
+/*! Writen  by SCSS */
+.sec_main {
+  position: relative;
+  background: url("../images/plan/main.jpg") center/cover no-repeat; }
+  .sec_main::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); }
+
+.plan_detail {
+  padding-top: clamp(50px, 6.67%, 80px);
+  padding-bottom: clamp(40px, 5%, 60px);
+  max-width: 1170px;
+  display: grid;
+  align-items: start;
+  align-content: start;
+  justify-content: space-between;
+  grid-template-columns: 37.61% 51.29%;
+  gap: 40px 0; }
+  @media screen and (max-width: 960px) {
+    .plan_detail {
+      grid-template-columns: 42% 54%;
+      gap: 30px 0; } }
+  @media screen and (max-width: 480px) {
+    .plan_detail {
+      grid-template-columns: 1fr;
+      gap: 25px 0; } }
+
+.detail_head_wrap {
+  line-height: 0.8;
+  display: flex;
+  align-items: baseline; }
+  .detail_head_wrap::before {
+    content: "";
+    align-self: stretch;
+    width: 10px;
+    background: linear-gradient(0deg, black 0%, #2d2523 100%);
+    border: 1px solid;
+    border-image: linear-gradient(160deg, #bfa240 0%, #ffeeac 50%, #bfa240 100%);
+    border-image-slice: 1; }
+  .detail_head_wrap .detail_head {
+    display: flex;
+    align-items: baseline;
+    font-size: clamp(20px, 2.74vw, 36px);
+    margin-left: 0.55em;
+    padding-right: 0.55em; }
+    @media screen and (max-width: 480px) {
+      .detail_head_wrap .detail_head {
+        font-size: 28px;
+        margin-left: 0.4em;
+        padding-right: 0.4em; } }
+    .detail_head_wrap .detail_head .text_lg {
+      font-size: 2em; }
+  .detail_head_wrap .ldk {
+    display: flex;
+    align-items: baseline;
+    font-size: clamp(16px, 1.85vw, 24px);
+    border-left: 1px solid;
+    padding-left: 0.83em; }
+    @media screen and (max-width: 480px) {
+      .detail_head_wrap .ldk {
+        padding-left: 0.5em;
+        font-size: 22px; } }
+    .detail_head_wrap .ldk .text_lg {
+      font-size: 1.8em; }
+
+.size_box .size_main_box {
+  font-size: clamp(24px, 3.87vw, 50px);
+  line-height: 1;
+  margin-bottom: 10px; }
+  @media screen and (max-width: 480px) {
+    .size_box .size_main_box {
+      font-size: 36px; } }
+  .size_box .size_main_box .size_main_head {
+    font-size: 0.4em; }
+  .size_box .size_main_box .text_min {
+    font-size: 0.7em; }
+  .size_box .size_main_box .size_sub {
+    font-size: 0.5em; }
+.size_box .size_sub_list {
+  margin-top: 1.66em;
+  font-size: clamp(14px, 1.37vw, 18px); }
+  @media screen and (max-width: 480px) {
+    .size_box .size_sub_list {
+      margin-top: 1em; } }
+
+.figure_box {
+  align-self: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 7; }
+  @media screen and (max-width: 960px) {
+    .figure_box {
+      align-self: start; } }
+  @media screen and (max-width: 480px) {
+    .figure_box {
+      grid-column: auto;
+      grid-row: auto; } }
+
+.copy_list {
+  text-align: center; }
+  .copy_list .item {
+    font-size: clamp(14px, 1.37vw, 18px);
+    line-height: 1.6;
+    padding: 1.22em 0.5em;
+    background: linear-gradient(0deg, black 0%, #2d2523 100%);
+    border: 1px solid;
+    border-image: linear-gradient(160deg, #bfa240 0%, #ffeeac 50%, #bfa240 100%);
+    border-image-slice: 1;
+    letter-spacing: -0.05em; }
+    @media screen and (max-width: 960px) {
+      .copy_list .item {
+        padding: 0.8em 0.5em; } }
+    @media screen and (max-width: 480px) {
+      .copy_list .item {
+        letter-spacing: 0; } }
+    .copy_list .item:not(:last-child) {
+      margin-bottom: 3.41%; }
+
+@media screen and (max-width: 480px) {
+  .hanrei {
+    width: 80%;
+    margin: auto; } }
+
+.return_button a {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: clamp(14px, 1.37vw, 18px);
+  line-height: 1;
+  border: 1px solid #fff;
+  transition: opacity 0.3s ease-in-out;
+  padding: 1.38em 0.5em; }
+  @media (hover: hover) {
+    .return_button a:hover {
+      opacity: 0.7; } }
+
+.detail_cap_box {
+  font-size: 12px;
+  line-height: 1.6666666667; }
+  @media screen and (max-width: 768px) {
+    .detail_cap_box {
+      font-size: 10px; } }
+  .detail_cap_box p {
+    text-indent: -1em;
+    padding-left: 1em; }
+
+/*# sourceMappingURL=plan_detail.css.map */

@@ -1,0 +1,357 @@
+@charset "utf-8";
+/*! Writen  by SCSS */
+@import "mixin";
+
+$cl40: clamp(30px,cal_per(1200,40),40px);
+$cl50: clamp(30px,cal_per(1200,50),50px);
+$cl60: clamp(40px,cal_per(1200,60),60px);
+$cl80: clamp(50px,cal_per(1200,80),80px);
+$cl100: clamp(60px,cal_per(1200,100),100px);
+$cl120: clamp(80px,cal_per(1200,120),120px);
+
+
+.sec_main{
+	padding-top: cal_per(1600,480);
+	position: relative;
+	background: url("../images/location/main.jpg") center / cover no-repeat;
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		inset: 0;
+		background: rgba(#000,0.8);
+	}
+	.cap{
+		z-index: 3;
+	}
+}
+
+.sec_lead{
+	padding-top: $cl60;
+	padding-bottom: $cl100;
+}
+
+.sec01{
+	padding-bottom: $cl100;
+}
+.sec02{
+	padding-bottom: $cl100;
+}
+
+.tab_wrap{
+	&.tab_wrap_top{
+		margin-bottom: $cl100;
+	}
+	&.tab_wrap_bottom{
+		margin-top: $cl60;
+	}
+}
+
+.sec_head_wrap{
+	text-align: center;
+	margin-bottom: $cl80;
+	.location_01_head{
+		@include w_per(1200,300);
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 0;
+		margin-bottom: 20px;
+		@include mq($br_tb){
+			@include w_per(728,300);
+		}
+		@include mq($br_sp){
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.sec_lead{
+	.inner_lead{
+		margin-bottom: $cl80;
+		@include mq($br_sp){
+			margin-bottom: 40px;
+		}
+	}
+}
+.inner_head_box{
+	position: relative;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $cl40;
+	line-height: 0;
+	@include mq($br_sp){
+		width: cal_per(440,400);
+	}
+	.inner_flash{
+		@include w_per(400,160);
+		position: absolute;
+		z-index: 1;
+		mix-blend-mode: screen;
+		left: 0;
+		top: cal_per(200,-70);
+	}
+}
+
+.sec01_list{
+	align-items: flex-start;
+	justify-content: center;
+	margin-bottom: -60px;
+	@include mq($br_tb){
+		justify-content: space-between;
+		margin-bottom: -40px;
+	}
+	.item{
+		width: cal_per(1200,360);
+		margin-right: flr_per(1200,60);
+		margin-bottom: 60px;
+		@include mq($br_tb){
+			width: 48%;
+			margin-bottom: 40px;
+			margin-right: 0;
+		}
+		&:nth-child(3),
+		&:last-child{
+			margin-right: 0;
+		}
+		@include mq($br_tb){
+			&:last-child{
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.item_image{
+			position: relative;
+			.item_year{
+				@include w_per(360,140);
+				position: absolute;
+				z-index: 2;
+				top: cal_per(240,-30);
+				left: cal_per(360,-25);
+				@include mq($br_tb){
+					top: -15px;
+					left: -10px;
+				}
+			}
+		}
+		.text_box{
+			margin-top: 20px;
+			@include mq($br_sp){
+				margin-top: 15px;
+			}
+			.item_name{
+				font-size: clamp(15px,fz_vw(1240,21),22px);
+				line-height: 1.2;
+				margin-bottom: 15px;
+				@include mq($br_sp){
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+.sec02_head{
+	//margin-bottom: $cl50;
+	letter-spacing: 0.1em;
+	@include mq($br_sp){
+		letter-spacing: 0;
+	}
+}
+.bg_head{
+	font-size: clamp(15px,fz_vw(1240,21),22px);
+	color: #fff;
+	background: #9d8447;
+	line-height: 1.2;
+	padding: 0.4em 0.7em;
+	margin-bottom: $cl40;
+	@include mq($br_sp){
+		text-align: center;
+	}
+}
+.sec02{
+	.sec02_outer{
+		&:not(:last-child){
+			margin-bottom: $cl80;
+		}
+	}
+}
+.sec02_outer_top{
+	margin-top: -100px;
+	padding-top: 150px;
+	@include mq($br_sp){
+		margin-top: -130px;
+		padding-top: 160px;
+	}
+}
+
+
+.sec02_wrap_01{
+	align-items: flex-start;
+	@include mq($br_sp){
+		display: block;
+	}
+	.sec02_01_left{
+		width: cal_per(1200,700);
+		@include mq($br_sp){
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		> .read{
+			margin-bottom: cal_per(700,60);
+			@include mq($br_sp){
+				margin-bottom: 20px;
+			}
+		}
+		.sec02_01_list{
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			gap: 15px flr_per(700,20);
+			@include mq($br_sp){
+				gap: 10px 2%;
+			}
+			.item{
+				background: #44403f;
+				padding: 15px flr_per(340,10);
+				@include mq($br_sp){
+					padding: 10px 8px;
+				}
+				.item_head{
+					font-size: clamp(15px,fz_vw(1240,18),20px);
+					line-height: 1.2;
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid rgba(#fff,0.1);
+					@include mq($br_sp){
+						padding-bottom: 6px;
+						margin-bottom: 6px;
+					}
+				}
+			}
+		}
+	}
+	.map_box{
+		@include w_per(1200,450);
+		@include mq($br_sp){
+			width: 100%;
+		}
+		.map{
+			position: relative;
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				inset: 0;
+				z-index: 2;
+				pointer-events: none;
+				border: 1px solid #b0b0b0;
+			}
+		}
+	}
+}
+
+.sec02_wrap_02{
+	display: grid;
+	align-items: start;
+	align-content: start;
+	grid-template-columns: cal_per(1200,570) cal_per(1200,580);
+	gap: 40px flr_per(1200,50);
+	@include mq($br_sp){
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+	.sec02_02_t_right{
+		.sec02_02_r_head{
+			color: #d5c78c;
+			margin-bottom: 20px;
+			@include mq($br_sp){
+				margin-bottom: 15px;
+			}
+		}
+		.image_box{
+			margin-bottom: 10px;
+			@include mq($br_sp){
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.sec02_02_b_left{
+		.sec02_02_b_l_head{
+			margin-bottom: 20px;
+			@include mq($br_sp){
+				margin-bottom: 15px;
+			}
+		}
+		.image_box_cap{
+			margin-top: 10px;
+			@include mq($br_sp){
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.sec02_02_list{
+		.item{
+			&:not(:last-child){
+				margin-bottom: cal_per(580,30);
+				@include mq($br_sp){
+					margin-bottom: 20px;
+				}
+			}
+			.item_head{
+				font-size: clamp(16px,fz_vw(1240,23),24px);
+				line-height: 1.2;
+				color: #d5c78c;
+				border-bottom: 1px solid #fff;
+				padding-bottom: 8px;
+				margin-bottom: 8px;
+			}
+			.item_image{
+				margin-top: 15px;
+				@include mq($br_sp){
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+.sec02_wrap_03{
+	align-items: flex-start;
+	@include mq($br_sp){
+		display: block;
+	}
+	.text_box{
+		width: cal_per(1200,480);
+		@include mq($br_sp){
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		.read{
+			margin-bottom: 20px;
+		}
+	}
+	.image_wrap{
+		width: cal_per(1200,640);
+		@include mq($br_sp){
+			width: 100%;
+		}
+		.image_box_01{
+			@include w_per(640,220);
+		}
+		.image_box_02{
+			@include w_per(640,400);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

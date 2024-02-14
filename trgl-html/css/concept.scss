@@ -1,0 +1,152 @@
+@charset "utf-8";
+/*! Writen  by SCSS */
+@import "mixin";
+
+$cl40: clamp(30px,cal_per(1200,40),40px);
+$cl50: clamp(30px,cal_per(1200,50),50px);
+$cl60: clamp(40px,cal_per(1200,60),60px);
+$cl80: clamp(50px,cal_per(1200,80),80px);
+$cl100: clamp(60px,cal_per(1200,100),100px);
+$cl120: clamp(80px,cal_per(1200,120),120px);
+
+
+.sec_main{
+	padding-top: clamp(300px,cal_per(1600,600),600px);
+	position: relative;
+	background: #000002 url("../images/concept/main.jpg") center / cover no-repeat;
+    @include mq($br_sp){
+        padding-top: cal_per(1600,640);
+        background: #000002 url("../images/concept/main_sp.jpg") center / cover no-repeat;
+    }
+	.main_head{
+		justify-content: flex-start;
+		padding-top: clamp(30px,cal_per(1600,65),65px);
+	}
+}
+.concept_outer{
+	background: #000002;
+}
+.sec01{
+	position: relative;
+	z-index: 3;
+	margin-top: clamp(-400px,cal_per(1600,-400),-200px);
+	padding-bottom: $cl50;
+	@include mq($br_pc){
+		margin-top: -20%;
+	}
+	@include mq($br_sp){
+		margin-top: -10%;
+	}
+}
+.sec01_lead_wrap{
+	position: relative;
+	z-index: 2;
+	.sec01_logo_box{
+		position: relative;
+		@include w_per(1200,400);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: cal_per(1200,60);
+		@include mq($br_sp){
+			width: 80%;
+		}
+	}
+	.sec_head{
+		margin-bottom: cal_per(1200,40);
+	}
+	.read_min{
+		@include lh(30,14);
+        margin-bottom: cal_per(1200,60);
+		@include mq($br_pc){
+			line-height: 1.8;
+		}
+	}
+}
+.sec01_bottom_wrap{
+	margin-top: clamp(-125px,cal_per(1600,-125),-10px);
+	position: relative;
+	padding-top: cal_per(1600,945);
+	@include mq($br_sp){
+		margin-top: 0;
+		padding-top: 100%;
+	}
+	.sec01_bottom_bg{
+		position: absolute;
+		inset: 0;
+		background: url("../images/concept/bg_01.jpg") center / cover no-repeat;
+		@include mq($br_sp){
+			background: url("../images/concept/bg_01.jpg") 25% center / cover no-repeat;
+		}
+		.cap{
+			padding-right: 20px;
+		}
+	}
+	.inner{
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		display: flex;
+		align-items: flex-end;
+		.sec01_bottom_text{
+			@include w_per(1200,476);
+			margin-top: auto;
+			@include mq($br_sp){
+				width: 55%;
+				padding-bottom: 25px;
+			}
+		}
+	}
+}
+
+
+.sec02{
+	position: relative;
+	padding-bottom: cal_per(1600,1060);
+	background: #05091b url("../images/concept/bg_02.jpg") left bottom / cover no-repeat;
+	@include mq($br_pc){
+		padding-bottom: 90%;
+		background: #05091b url("../images/concept/bg_02.jpg") left bottom / 100% auto no-repeat;
+	}
+	@include mq($br_tb){
+		padding-bottom: cal_per(1600,1060);
+	}
+	.inner{
+		position: absolute;
+		inset: 0;
+		@include mq($br_tb){
+			position: static;
+		}
+		.sec02_head{
+			position: absolute;
+			padding-top: cal_per(1200,50);
+			left: 0;
+			font-size: clamp(20px,fz_vw(1240,21),22px);
+			@include lh(40,22);
+			@include mq($br_tb){
+				position: static;
+				padding-top: 40px;
+				text-align: center;
+			}
+		}
+		.sec02_text_box{
+			position: absolute;
+			padding-top: cal_per(1200,50);
+			right: 0;
+			@include mq($br_tb){
+				position: static;
+				padding-top: 40px;
+			}
+			.sec02_lead{
+				font-size: clamp(18px,fz_vw(1240,25),26px);
+				line-height: 1.2;
+				margin-top: 1em;
+				margin-bottom: cal_em(26,40);
+			}
+		}
+	}
+}
+
+.cap_wrap{
+	padding-top: $cl40;
+}
+

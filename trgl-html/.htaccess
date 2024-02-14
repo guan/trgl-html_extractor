@@ -1,0 +1,12 @@
+Options +Includes
+
+AddHandler php7-script .html
+AddOutputFilter INCLUDES .html
+DirectoryIndex index.html index.php .ht
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[^/\.]+$
+RewriteRule .* %{REQUEST_URI}/ [R=301,L]
+

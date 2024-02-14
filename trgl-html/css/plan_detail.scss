@@ -1,0 +1,195 @@
+@charset "utf-8";
+/*! Writen  by SCSS */
+@import "mixin";
+
+$cl40: clamp(30px,cal_per(1200,40),40px);
+$cl60: clamp(40px,cal_per(1200,60),60px);
+$cl80: clamp(50px,cal_per(1200,80),80px);
+$cl100: clamp(60px,cal_per(1200,100),100px);
+$cl120: clamp(80px,cal_per(1200,120),120px);
+
+
+.sec_main{
+	position: relative;
+	background: url("../images/plan/main.jpg") center / cover no-repeat;
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		inset: 0;
+		background: rgba(#000,0.8);
+	}
+}
+.plan_detail{
+	padding-top: $cl80;
+	padding-bottom: $cl60;
+	max-width: 1170px;
+	display: grid;
+	align-items: start;
+	align-content: start;
+	justify-content: space-between;
+	grid-template-columns: cal_per(1170,440) cal_per(1170,600);
+	gap: 40px 0;
+	@include mq($br_pc){
+		grid-template-columns: 42% 54%;
+		gap: 30px 0;
+	}
+	@include mq($br_sp){
+		grid-template-columns: 1fr;
+		gap: 25px 0;
+	}
+}
+
+.detail_head_wrap{
+	line-height: 0.8;
+	display: flex;
+	align-items: baseline;
+	&::before{
+		content: "";
+		align-self: stretch;
+		width: 10px;
+		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(45,37,35,1) 100%);
+		border: 1px solid;
+		border-image: linear-gradient(160deg, rgba(191,162,64,1) 0%, rgba(255,238,172,1) 50%, rgba(191,162,64,1) 100%);
+		border-image-slice: 1;
+	}
+	.detail_head{
+		display: flex;
+		align-items: baseline;
+		font-size: clamp(20px,fz_vw(1240,34),36px);
+		margin-left: cal_em(36,20);
+		padding-right: cal_em(36,20);
+		@include mq($br_sp){
+			font-size: 28px;
+			margin-left: 0.4em;
+			padding-right: 0.4em;
+		}
+		.text_lg{
+			font-size: 2em;
+		}
+	}
+	.ldk{
+		display: flex;
+		align-items: baseline;
+		font-size: clamp(16px,fz_vw(1240,23),24px);
+		border-left: 1px solid;
+		padding-left: cal_em(24,20);
+		@include mq($br_sp){
+			padding-left: 0.5em;
+			font-size: 22px;
+		}
+		.text_lg{
+			font-size: 1.8em;
+		}
+	}
+}
+.size_box{
+	.size_main_box{
+		font-size: clamp(24px,fz_vw(1240,48),50px);
+		line-height: 1;
+		margin-bottom: 10px;
+		@include mq($br_sp){
+			font-size: 36px;
+		}
+		.size_main_head{
+			font-size: 0.4em;
+		}
+		.text_min{
+			font-size: 0.7em;
+		}
+		.size_sub{
+			font-size: 0.5em;
+		}
+	}
+	.size_sub_list{
+		margin-top: cal_em(18,30);
+		font-size: clamp(14px,fz_vw(1240,17),18px);
+		@include mq($br_sp){
+			margin-top: 1em;
+		}
+	}
+}
+
+
+.figure_box{
+	align-self: center;
+	grid-column: 2 / 3;
+	grid-row: 1 / 7;
+	@include mq($br_pc){
+		align-self: start;
+	}
+	@include mq($br_sp){
+		grid-column: auto;
+		grid-row: auto;
+	}
+}
+
+.copy_list{
+	text-align: center;
+	.item{
+		font-size: clamp(14px,fz_vw(1240,17),18px);
+		line-height: 1.6;
+		padding: cal_em(18,22) 0.5em;
+		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(45,37,35,1) 100%);
+		border: 1px solid;
+		border-image: linear-gradient(160deg, rgba(191,162,64,1) 0%, rgba(255,238,172,1) 50%, rgba(191,162,64,1) 100%);
+		border-image-slice: 1;
+		letter-spacing: -0.05em;
+		@include mq($br_pc){
+			padding: 0.8em 0.5em;
+		}
+		@include mq($br_sp){
+			letter-spacing: 0;
+		}
+		&:not(:last-child){
+			margin-bottom: cal_per(440,15);
+		}
+	}
+}
+.hanrei{
+	@include mq($br_sp){
+		width: 80%;
+		margin: auto;
+	}
+}
+.return_button{
+	a{
+		max-width: 300px;
+		width: 100%;
+		margin: auto;
+		display: block;
+		text-align: center;
+		font-size: clamp(14px,fz_vw(1240,17),18px);
+		line-height: 1;
+		border: 1px solid #fff;
+		transition: opacity 0.3s ease-in-out;
+		padding: cal_em(18,25) 0.5em;
+		@include hover{
+			opacity: 0.7;
+		}
+	}
+}
+.detail_cap_box{
+	font-size: 12px;
+	line-height: (20 / 12);
+	@include mq($br_tb){
+		font-size: 10px;
+	}
+	p{
+		text-indent: -1em;
+		padding-left: 1em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

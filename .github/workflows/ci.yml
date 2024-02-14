@@ -68,7 +68,7 @@ jobs:
         uses: ./
         with:
           milliseconds: 2000
-          repo-name: ${{ env.REPO_NAME }}
+          repo_name: ${{ env.REPO_NAME }}
 
       - name: Print Output
         id: repo

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+  padding: 0 !important;
+}
+header,
+footer,
+#information,
+aside {
+  display: none !important;
+}
+
+/* plan_detail */
+.plan-detail {
+  padding: 10px;
+}
+
+.plan-detail .plan-block01 {
+  display: none;
+}
+.plan-detail-block {
+  padding: 20px 40px;
+}
+.plan-detail-block .summary {
+  margin-top: 0;
+}
+.plan-detail-block .summary-card {
+  width: 40%;
+  min-width: auto;
+  padding: 2px;
+}
+.plan-detail-block .summary-card dl {
+  min-height: auto;
+}
+.plan-detail-block .summary-card dl .type {
+  padding-right: 20px;
+  font-size: 1.8rem;
+}
+.plan-detail-block .summary-card dl .type .large-text {
+  font-size: 200%;
+}
+.plan-detail-block .summary-card dl .madori {
+  padding-left: 1rem;
+  font-size: 1.8rem;
+}
+.plan-detail-block .summary-card dl .madori .large-text {
+  font-size: 150%;
+}
+.plan-detail-block .summary-card dd.madori {
+  padding-left: 20px;
+}
+.plan-detail-block .summary-num {
+  /* display: inline-block; */
+  width: 60%;
+}
+.plan-detail-block .summary-num-wrap {
+  font-size: 1.8rem;
+}
+.plan-detail-block .summary-num .value {
+  font-size: 3rem;
+}
+.plan-detail-block .meta-list {
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.plan-detail-block .meta-list > li .label {
+  font-size: 1.4rem;
+}
+.plan-detail-block .meta-list > li .meta-num {
+  margin-top: 0;
+}
+.plan-detail-block .meta-list > li .meta-num .value {
+  font-size: 2rem;
+}
+.plan-detail-block .point-area {
+  display: none;
+}
+.plan-detail-block .drawing {
+  margin-top: 20px;
+  padding: 20px 0 0;
+}
+.plan-detail-block .drawing-inner .flex-wrapper {
+  display: none;
+}
+.plan-detail-block .drawing-inner .tab-content figcaption {
+  margin-top: 50px;
+  font-size: 2.2rem;
+}
+.plan-detail-block .drawing-area {
+  min-width: auto;
+  padding-top: 0;
+}
+.plan-detail-block .drawing-inner .price-detail-area {
+  display: none;
+}
+.plan-detail-block .madori-list {
+  display: none;
+}
+.plan-detail-block .print-btn {
+  display: none;
+}
+.plan-detail-block .anno {
+  font-size: 1.2rem;
+}
+.balloon,
+.tab-btn-wrap,
+/* .repayment-table, */
+.sp_fNavi,
+.print_none {
+  display: none;
+}
+
+/* secret */
+/* #main.plan_detail > .ttl{
+	display: none;
+}
+#main.secret #area1 {
+	margin-top: 0px;
+}
+#main.plan_detail #area3 .inner figure {
+	width: 75%;
+	padding: 3% 0 0;
+	margin: 0 auto 0;
+}
+
+#main.plan_detail #menu_type{
+	display: none;
+}
+ */

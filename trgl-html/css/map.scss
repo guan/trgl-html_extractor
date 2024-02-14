@@ -1,0 +1,59 @@
+@charset "utf-8";
+/*! Writen  by SCSS */
+@import "mixin";
+
+.sec_main{
+	padding-top: 200px;
+	@include mq($br_sp){
+		padding-top: 150px;
+	}
+}
+
+.sec01{
+	max-width: 800px;
+	margin: 60px auto;
+	@include mq($br_sp){
+		margin: 40px auto;
+	}
+	.map_head{
+		text-align: center;
+		font-size: clamp(18px,fz_vw(1240,25),26px);
+		margin-bottom: cal_em(26,30);
+	}
+	.map{
+		position: relative;
+		margin-bottom: 60px;
+		@include mq($br_sp){
+			margin-bottom: 30px;
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			pointer-events: none;
+			border: 1px solid #000;
+		}
+	}
+	.map02{
+		max-width: 600px;
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		@include mq($br_sp){
+			margin-top: 15px;
+		}
+	}
+}
+.cap_wrap{
+	padding-bottom: 60px;
+	@include mq($br_sp){
+		padding-bottom: 40px;
+	}
+	.cap_inner{
+		max-width: 800px;
+	}
+}

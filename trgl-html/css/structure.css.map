@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,sBAAsB;AAYrB,0BAAS;EACR,UAAU,EAAE,IAAI;ECwFjB,oCAAwC;IDzFxC,0BAAS;MAGP,UAAU,EAAE,IAAI",
+"sources": ["structure.scss","_mixin.scss"],
+"names": [],
+"file": "structure.css"
+}

@@ -1,0 +1,128 @@
+/*! Writen  by SCSS */
+.sec_main {
+  padding-top: clamp(300px, 37.5%, 600px);
+  position: relative;
+  background: #000002 url("../images/concept/main.jpg") center/cover no-repeat; }
+  @media screen and (max-width: 480px) {
+    .sec_main {
+      padding-top: 40%;
+      background: #000002 url("../images/concept/main_sp.jpg") center/cover no-repeat; } }
+  .sec_main .main_head {
+    justify-content: flex-start;
+    padding-top: clamp(30px, 4.07%, 65px); }
+
+.concept_outer {
+  background: #000002; }
+
+.sec01 {
+  position: relative;
+  z-index: 3;
+  margin-top: clamp(-400px, -25%, -200px);
+  padding-bottom: clamp(30px, 4.17%, 50px); }
+  @media screen and (max-width: 960px) {
+    .sec01 {
+      margin-top: -20%; } }
+  @media screen and (max-width: 480px) {
+    .sec01 {
+      margin-top: -10%; } }
+
+.sec01_lead_wrap {
+  position: relative;
+  z-index: 2; }
+  .sec01_lead_wrap .sec01_logo_box {
+    position: relative;
+    max-width: 400px;
+    width: 33.34%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%; }
+    @media screen and (max-width: 480px) {
+      .sec01_lead_wrap .sec01_logo_box {
+        width: 80%; } }
+  .sec01_lead_wrap .sec_head {
+    margin-bottom: 3.34%; }
+  .sec01_lead_wrap .read_min {
+    line-height: 2.15;
+    margin-bottom: 5%; }
+    @media screen and (max-width: 960px) {
+      .sec01_lead_wrap .read_min {
+        line-height: 1.8; } }
+
+.sec01_bottom_wrap {
+  margin-top: clamp(-125px, -7.81%, -10px);
+  position: relative;
+  padding-top: 59.07%; }
+  @media screen and (max-width: 480px) {
+    .sec01_bottom_wrap {
+      margin-top: 0;
+      padding-top: 100%; } }
+  .sec01_bottom_wrap .sec01_bottom_bg {
+    position: absolute;
+    inset: 0;
+    background: url("../images/concept/bg_01.jpg") center/cover no-repeat; }
+    @media screen and (max-width: 480px) {
+      .sec01_bottom_wrap .sec01_bottom_bg {
+        background: url("../images/concept/bg_01.jpg") 25% center/cover no-repeat; } }
+    .sec01_bottom_wrap .sec01_bottom_bg .cap {
+      padding-right: 20px; }
+  .sec01_bottom_wrap .inner {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end; }
+    .sec01_bottom_wrap .inner .sec01_bottom_text {
+      max-width: 476px;
+      width: 39.67%;
+      margin-top: auto; }
+      @media screen and (max-width: 480px) {
+        .sec01_bottom_wrap .inner .sec01_bottom_text {
+          width: 55%;
+          padding-bottom: 25px; } }
+
+.sec02 {
+  position: relative;
+  padding-bottom: 66.25%;
+  background: #05091b url("../images/concept/bg_02.jpg") left bottom/cover no-repeat; }
+  @media screen and (max-width: 960px) {
+    .sec02 {
+      padding-bottom: 90%;
+      background: #05091b url("../images/concept/bg_02.jpg") left bottom/100% auto no-repeat; } }
+  @media screen and (max-width: 768px) {
+    .sec02 {
+      padding-bottom: 66.25%; } }
+  .sec02 .inner {
+    position: absolute;
+    inset: 0; }
+    @media screen and (max-width: 768px) {
+      .sec02 .inner {
+        position: static; } }
+    .sec02 .inner .sec02_head {
+      position: absolute;
+      padding-top: 4.17%;
+      left: 0;
+      font-size: clamp(20px, 1.69vw, 22px);
+      line-height: 1.82; }
+      @media screen and (max-width: 768px) {
+        .sec02 .inner .sec02_head {
+          position: static;
+          padding-top: 40px;
+          text-align: center; } }
+    .sec02 .inner .sec02_text_box {
+      position: absolute;
+      padding-top: 4.17%;
+      right: 0; }
+      @media screen and (max-width: 768px) {
+        .sec02 .inner .sec02_text_box {
+          position: static;
+          padding-top: 40px; } }
+      .sec02 .inner .sec02_text_box .sec02_lead {
+        font-size: clamp(18px, 2.01vw, 26px);
+        line-height: 1.2;
+        margin-top: 1em;
+        margin-bottom: 1.53em; }
+
+.cap_wrap {
+  padding-top: clamp(30px, 3.34%, 40px); }
+
+/*# sourceMappingURL=concept.css.map */

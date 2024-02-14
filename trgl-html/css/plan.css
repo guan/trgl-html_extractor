@@ -1,0 +1,146 @@
+/*! Writen  by SCSS */
+.sec_main {
+  position: relative;
+  background: url("../images/plan/main.jpg?230111") center/cover no-repeat; }
+  .sec_main::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); }
+
+.plan_inner {
+  padding: clamp(40px, 5%, 60px) 0; }
+
+.plan_lead {
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  margin-bottom: clamp(60px, 8.34%, 100px); }
+  @media screen and (max-width: 768px) {
+    .plan_lead {
+      font-size: 4.8vw; } }
+  @media screen and (max-width: 480px) {
+    .plan_lead {
+      margin-bottom: 40px; } }
+
+.img01 {
+  max-width: 900px;
+  margin: 0 auto;
+  width: calc(100% - 40px); }
+
+.plan_list {
+  display: grid;
+  align-items: start;
+  align-content: start;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 6.66%; }
+  @media screen and (max-width: 768px) {
+    .plan_list {
+      gap: 30px 4%; } }
+  @media screen and (max-width: 480px) {
+    .plan_list {
+      grid-template-columns: 1fr;
+      gap: 20px 0; } }
+  .plan_list .item a,
+  .plan_list .item .close {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, black 0%, #2d2523 100%);
+    position: relative; }
+    .plan_list .item a::after,
+    .plan_list .item .close::after {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      border: 1px solid;
+      border-image: linear-gradient(160deg, #bfa240 0%, #ffeeac 50%, #bfa240 100%);
+      border-image-slice: 1; }
+    .plan_list .item a .item_text_box,
+    .plan_list .item .close .item_text_box {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 10px 0; }
+      .plan_list .item a .item_text_box .type_box,
+      .plan_list .item .close .item_text_box .type_box {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        font-size: clamp(20px, 2.74vw, 36px);
+        line-height: 1;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 9.38%; }
+        @media screen and (max-width: 480px) {
+          .plan_list .item a .item_text_box .type_box,
+          .plan_list .item .close .item_text_box .type_box {
+            font-size: 24px;
+            padding-bottom: 5px; } }
+        .plan_list .item a .item_text_box .type_box .text_lg,
+        .plan_list .item .close .item_text_box .type_box .text_lg {
+          font-size: 2em; }
+      .plan_list .item a .item_text_box .ldk,
+      .plan_list .item .close .item_text_box .ldk {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 9.38% 0;
+        font-size: clamp(16px, 1.85vw, 24px);
+        line-height: 1; }
+        @media screen and (max-width: 480px) {
+          .plan_list .item a .item_text_box .ldk,
+          .plan_list .item .close .item_text_box .ldk {
+            font-size: 18px;
+            padding: 5px 0; } }
+        .plan_list .item a .item_text_box .ldk .text_lg,
+        .plan_list .item .close .item_text_box .ldk .text_lg {
+          font-size: 1.8em; }
+      .plan_list .item a .item_text_box .size_box,
+      .plan_list .item .close .item_text_box .size_box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: clamp(22px, 3.06vw, 40px);
+        border-top: 1px solid #fff;
+        line-height: 0.8;
+        padding-top: 9.38%; }
+        @media screen and (max-width: 480px) {
+          .plan_list .item a .item_text_box .size_box,
+          .plan_list .item .close .item_text_box .size_box {
+            font-size: 24px;
+            padding-top: 5px; } }
+        .plan_list .item a .item_text_box .size_box .size_head,
+        .plan_list .item .close .item_text_box .size_box .size_head {
+          font-size: 0.4em; }
+        .plan_list .item a .item_text_box .size_box .size,
+        .plan_list .item .close .item_text_box .size_box .size {
+          display: flex;
+          align-items: baseline;
+          margin: 0.2em 0; }
+        .plan_list .item a .item_text_box .size_box .size_sub,
+        .plan_list .item .close .item_text_box .size_box .size_sub {
+          font-size: 0.5em; }
+    .plan_list .item a .item_figure,
+    .plan_list .item .close .item_figure {
+      max-width: 250px;
+      width: 44.65%;
+      margin-right: 3.58%; }
+  .plan_list .item a {
+    transition: opacity 0.3s ease-in-out; }
+    @media (hover: hover) {
+      .plan_list .item a:hover {
+        opacity: 0.7; } }
+
+/*# sourceMappingURL=plan.css.map */

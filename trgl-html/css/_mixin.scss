@@ -1,0 +1,137 @@
+
+// site settings:
+
+$cont_width : 1200px;
+$pc : "body:not(.mobile)" ;
+
+$color_main : #900000;
+$color02 : #C00000;
+$color03 : #300000;
+
+$main_bg : #eeeeee;
+$bg1 : #cccccc;
+$bg2 : #eeeeee;
+
+$nav_change:768;
+
+$br_pc : 960;
+$br_tb : 768;
+$br_sp : 480;
+
+$easeOQ: cubic-bezier(0.5, 1, 0.89, 1);
+
+// breakpoint
+@mixin breakpoint($break:1200){
+	@media screen and (max-width: #{$break}px){ // VPC
+		.vpc#{$break}{
+			display: none;	
+		}
+	}
+	@media not screen, screen and (min-width: #{1 + $break}px){ // VSP
+		.vsp#{$break}{
+			display: none;	
+		}
+	}
+}
+
+// width percentage(ceil)
+@mixin w_per($parent:$cont_width,$child:$cont_width/2) {
+	$per:ceil($child/$parent*10000%) / 100;
+	max-width: #{$child}px;
+	width:$per;
+}
+@function cal_per($parent:$cont_width,$child:$cont_width/2) {
+	@return ceil($child/$parent*10000%) / 100;
+}
+
+// width percentage(floor)
+@mixin w_per_f($parent:$cont_width,$child:$cont_width/2) {
+	$per:floor($child/$parent*10000%) / 100;
+	width:$per;
+}
+@function flr_per($parent:$cont_width,$child:$cont_width/2) {
+	@return floor($child/$parent*10000%) / 100;
+}
+
+
+// width percentage(round)
+@mixin w_per_r($parent:$cont_width,$child:$cont_width/2) {
+	$per:round($child/$parent*10000%) / 100;
+	width:$per;
+}
+//vw
+//使用方法・値の箇所に cal_vw(親の幅,子の数値)
+//子の数値の%数値を返します。数値は切り上げ。vwの計算式です
+@function cal_vw($parent:$cont_width,$child:$cont_width) {
+	@return ceil($child/$parent*10000vw) / 100;
+}
+//使用方法・値の箇所に cal_vw(親の幅,子の数値)
+//子の数値の%数値を返します。数値は切り上げ。vwの計算式です
+@function flr_vw($parent:$cont_width,$child:$cont_width) {
+	@return floor($child/$parent*10000vw) / 100;
+}
+@mixin lh($line_hight:$lh,$font_size:$fz) {
+	$calc_lh:ceil($line_hight / $font_size * 100) / 100;
+	line-height: $calc_lh;
+}
+
+
+@mixin t_shadow_spr($spread:10, $shadow-color:#000000){
+	$sha:(0px 0px 0px #{$shadow-color});
+	@for $i from 1 through $spread {
+		$sha:(#{$sha} , 0px 0px #{$i}px #{$shadow-color});
+	}
+	text-shadow:$sha;
+}
+
+@mixin b_shadow_spr($spread:10, $shadow-color:#000000){
+	$sha:(0px 0px 0px #{$shadow-color});
+	@for $i from 1 through $spread {
+		$sha:(#{$sha} , 0px 0px #{$i}px #{$shadow-color});
+	}
+	box-shadow:$sha;
+}
+@mixin f_shadow_spr($spread:10, $shadow-color:#000000){
+	$sha:drop-shadow(0px 0px 0px #{$shadow-color});
+	@for $i from 1 through $spread {
+		$sha:(#{$sha} drop-shadow(0px 0px #{$i}px #{$shadow-color}));
+	}
+	filter:$sha;
+}
+
+@mixin mq($bp: 768) {
+	@media screen and (max-width: #{$bp}px) {
+    @content;
+  }
+}
+@mixin hover {
+	@media (hover: hover) {
+		&:hover{
+			@content;
+		}
+	}
+}
+@mixin hover_opa($time:0.3,$opa:0.6){
+	transition: opacity #{$time}s ease-in-out;
+	@media (hover: hover) {
+		&:hover{
+			opacity: $opa;
+		}
+	}
+}
+
+//フォントサイズvw計算式
+@mixin font_vw($window:$window_width,$font_size:$fz) {
+	font-size: flr_vw($window,$font_size);
+}
+
+//clampの中などで使いたい用
+@function fz_vw($window:$window_width,$font_size:$fz) {
+	@return flr_vw($window,$font_size);
+}
+
+//emの計算結果がでます。切り捨て。
+@function cal_em($font_size:$fz,$size:$size) {
+	$calc_em:floor($size / $font_size * 100) / 100;
+	@return #{$calc_em}em;
+}
